@@ -1,1 +1,1 @@
-include ':app', ':easysource'
+include ':sample', ':easysource'

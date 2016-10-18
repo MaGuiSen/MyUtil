@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">EasyUtil</string>
+    <string name="drugstore_nearby_distance_unit_1">公里</string>
+    <string name="drugstore_nearby_distance_unit_2">米</string>
+    <string name="toast_select_date_fail">您选择的日期不合法</string>
 </resources>
