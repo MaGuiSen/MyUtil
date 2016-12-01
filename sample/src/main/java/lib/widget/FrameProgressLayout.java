@@ -52,7 +52,7 @@ public class FrameProgressLayout extends LinearLayout {
         txtStatus.setVisibility(GONE);
 
         imgLoadStatus.setVisibility(VISIBLE);
-        imgLoadStatus.setImageResource(R.mipmap.icon_load_fail);
+        imgLoadStatus.setImageResource(R.mipmap.ic_load_fail);
 
         btnRefresh.setVisibility(VISIBLE);
         btnRefresh.setText(msg);
@@ -74,7 +74,7 @@ public class FrameProgressLayout extends LinearLayout {
         txtStatus.setVisibility(GONE);
 
         imgLoadStatus.setVisibility(VISIBLE);
-        imgLoadStatus.setImageResource(R.mipmap.icon_load_fail);
+        imgLoadStatus.setImageResource(R.mipmap.ic_load_fail);
 
         btnRefresh.setVisibility(VISIBLE);
         btnRefresh.setOnClickListener(new OnClickListener() {
@@ -92,7 +92,7 @@ public class FrameProgressLayout extends LinearLayout {
     public void noImage(){
         setVisibility(VISIBLE);
         imgLoadStatus.setVisibility(VISIBLE);
-        imgLoadStatus.setImageResource(R.mipmap.icon_load_fail);
+        imgLoadStatus.setImageResource(R.mipmap.ic_load_fail);
 
         progressBar.setVisibility(GONE);
         txtStatus.setVisibility(GONE);
@@ -101,7 +101,7 @@ public class FrameProgressLayout extends LinearLayout {
 
     public void noData(){
         imgLoadStatus.setVisibility(VISIBLE);
-        imgLoadStatus.setImageResource(R.mipmap.icon_load_no_data);
+        imgLoadStatus.setImageResource(R.mipmap.ic_load_no_data);
         txtStatus.setVisibility(VISIBLE);
         txtStatus.setText("暂无数据");
 
@@ -111,7 +111,7 @@ public class FrameProgressLayout extends LinearLayout {
 
     public void noData(String str){
         imgLoadStatus.setVisibility(VISIBLE);
-        imgLoadStatus.setImageResource(R.mipmap.icon_load_no_data);
+        imgLoadStatus.setImageResource(R.mipmap.ic_load_no_data);
         txtStatus.setText(str);
         txtStatus.setVisibility(VISIBLE);
 

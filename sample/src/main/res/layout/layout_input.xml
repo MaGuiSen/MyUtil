@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/shape_round_rect_white_boder_grey_a" >
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="#00FFFFFF"
+            android:hint="搜索提示"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:maxLines="1"
+            android:textColor="#4d4d4d"
+            android:textColorHint="#b3b3b3"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_search" />
+
+        <ImageView
+            android:id="@+id/edit_delete"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_edit_delete"/>
+    </RelativeLayout>
+</LinearLayout> 

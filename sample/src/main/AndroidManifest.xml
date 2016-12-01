@@ -8,12 +8,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="module.user.login.LoginActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="module.nine_grid.NieGridActivity">
+        </activity>
+        <activity android:name="module.user.login.LoginActivity">
+        </activity>
+        <activity android:name="module.user.register.RegisterActivity">
+        </activity>
+        <activity android:name="module.user.forget.ForgetActivity">
+        </activity>
+        <activity android:name="module.list.ListActivity">
         </activity>
     </application>
 

@@ -1,0 +1,9 @@
+<resources>
+    <!--长度这种没必要设置成统一的，到时候根据需要，进行设置变量-->
+    <dimen name="t_a">8dp</dimen>
+    <dimen name="t_b">16dp</dimen>
+    <dimen name="t_c">24dp</dimen>
+    <dimen name="t_d">32dp</dimen>
+    <dimen name="t_e">40dp</dimen>
+    <dimen name="t_f">48dp</dimen>
+</resources>

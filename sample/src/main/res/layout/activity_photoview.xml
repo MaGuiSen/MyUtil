@@ -22,7 +22,7 @@
             android:layout_height="25dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="40dp"
-            android:background="@mipmap/check_out"
+            android:background="@mipmap/ic_check_out"
             android:button="@null"
             android:checked="true" />
 
@@ -51,7 +51,7 @@
                 android:layout_height="25dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="40dp"
-                android:background="@mipmap/check_out"
+                android:background="@mipmap/ic_check_out"
                 android:button="@null"
                 android:checked="true" />
 

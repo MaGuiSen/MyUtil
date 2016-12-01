@@ -149,25 +149,25 @@ public class PhotoViewDisplayActivity extends FragmentActivity {
         //checkBox
         cbPicOrg.setVisibility(View.VISIBLE);
         cbPicOrg.setChecked(isOrigin);
-        cbPicOrg.setBackgroundResource(isOrigin?R.mipmap.check_down:R.mipmap.check_out);
+        cbPicOrg.setBackgroundResource(isOrigin?R.mipmap.ic_check_down :R.mipmap.ic_check_out);
         tvSize.setText("原图("+ totalFileSize +")");
         cbPicOrg.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 isOrigin = isChecked;
-                cbPicOrg.setBackgroundResource(isChecked?R.mipmap.check_down:R.mipmap.check_out);
+                cbPicOrg.setBackgroundResource(isChecked?R.mipmap.ic_check_down :R.mipmap.ic_check_out);
             }
         });
 
         cbChoice.setVisibility(View.VISIBLE);
         cbChoice.setChecked(true);
-        cbChoice.setBackgroundResource(R.mipmap.check_down);
+        cbChoice.setBackgroundResource(R.mipmap.ic_check_down);
         cbPicOrg.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Map<String,Object> image = imageStatus.get(position);
                 image.put(key_choice,isChecked);
-                cbChoice.setBackgroundResource(isChecked ? R.mipmap.check_down:R.mipmap.check_out);
+                cbChoice.setBackgroundResource(isChecked ? R.mipmap.ic_check_down :R.mipmap.ic_check_out);
                 //触发尺寸的变化
                 long currSize = (long) image.get(key_size);
                 totalFileSize = isChecked ? totalFileSize +currSize: totalFileSize -currSize;
