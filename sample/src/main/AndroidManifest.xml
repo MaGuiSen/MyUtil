@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ma.myutil">
-
+    <!-- 摄像头 -->
+    <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,6 +26,13 @@
         </activity>
         <activity android:name="module.list.ListActivity">
         </activity>
+        <activity android:name="module.func_widget.FuncActivity">
+        </activity>
+        <activity android:name="module.indicate_head.IndicateActivity">
+        </activity>
+        <activity android:name="module.qrcode.QRcodeActivity">
+        </activity>
+
     </application>
 
 </manifest>
