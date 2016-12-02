@@ -202,7 +202,7 @@
 //    //并监听用户权限选择返回
 //    @Override
 //    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-//        switch (requestCode) {
+//        switch_widget (requestCode) {
 //            case REQ_RECORD_PMS:
 //                if (grantResults != null && grantResults.length != 0)
 //                    if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {

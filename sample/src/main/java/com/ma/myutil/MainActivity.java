@@ -4,13 +4,17 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import lib.widget.NestRadioGroup;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +24,18 @@ public class MainActivity extends AppCompatActivity {
     RadioButton tabHome;
     @Bind(R.id.main_radio)
     NestRadioGroup mainRadio;
+
+    //标题栏目相关
+    @Bind(R.id.img_bar_left)
+    ImageView imgBarLeft;
+    @Bind(R.id.txt_bar_left)
+    TextView txtBarLeft;
+    @Bind(R.id.txt_bar_title)
+    TextView txtBarTitle;
+    @Bind(R.id.txt_bar_right)
+    TextView txtBarRight;
+    @Bind(R.id.img_bar_right)
+    ImageView imgBarRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 另外的
      */
-    private void initRadioBtn(){
+    private void initRadioBtn() {
         tabHome.setChecked(true);
         mainRadio.setOnCheckedChangeListener(new NestRadioGroup.OnCheckedChangeListener() {
             @Override
@@ -52,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     /*
     三方的
     * */
@@ -118,5 +135,28 @@ public class MainActivity extends AppCompatActivity {
     public Fragment getMineFrm() {
         if (mineFrm == null) mineFrm = new MineFragment();
         return mineFrm;
+    }
+
+    //标题栏目相关
+    @OnClick({
+            R.id.img_bar_left,
+            R.id.txt_bar_left,
+            R.id.txt_bar_title,
+            R.id.txt_bar_right,
+            R.id.img_bar_right
+    })
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.img_bar_left:
+                break;
+            case R.id.txt_bar_left:
+                break;
+            case R.id.txt_bar_title:
+                break;
+            case R.id.txt_bar_right:
+                break;
+            case R.id.img_bar_right:
+                break;
+        }
     }
 }

@@ -51,24 +51,24 @@ public class CharacterParserUtil {
 			"yin", "ying", "yo", "yong", "you", "yu", "yuan", "yue", "yun", "za", "zai", "zan", "zang", "zao", "ze", "zei", "zen", "zeng", "zha",
 			"zhai", "zhan", "zhang", "zhao", "zhe", "zhen", "zheng", "zhi", "zhong", "zhou", "zhu", "zhua", "zhuai", "zhuan", "zhuang", "zhui",
 			"zhun", "zhuo", "zi", "zong", "zou", "zu", "zuan", "zui", "zun", "zuo"};
-	private StringBuilder buffer;
-	private String resource;
+	private static StringBuilder buffer;
+	private static String resource;
 	private static CharacterParserUtil characterParserUtil = new CharacterParserUtil();
 
 	public static CharacterParserUtil getInstance() {
 		return characterParserUtil;
 	}
 
-	public String getResource() {
+	public static String getResource() {
 		return resource;
 	}
 
-	public void setResource(String resource) {
-		this.resource = resource;
+	public static void setResource(String resource_) {
+		resource = resource_;
 	}
 
 	/** * 汉字转成ASCII码 * * @param chs * @return */
-	private int getChsAscii(String chs) {
+	private static int getChsAscii(String chs) {
 		int asc = 0;
 		try {
 			byte[] bytes = chs.getBytes("gb2312");
@@ -90,7 +90,7 @@ public class CharacterParserUtil {
 	}
 
 	/** * 单字解析 * * @param str * @return */
-	public String convert(String str) {
+	public static String convert(String str) {
 		String result = null;
 		int ascii = getChsAscii(str);
 		if (ascii > 0 && ascii < 160) {
@@ -107,7 +107,7 @@ public class CharacterParserUtil {
 	}
 
 	/** * 词组解析 * * @param chs * @return */
-	public String getSelling(String chs) {
+	public static String getSelling(String chs) {
 		String key, value;
 		buffer = new StringBuilder();
 		for (int i = 0; i < chs.length(); i++) {
@@ -125,8 +125,8 @@ public class CharacterParserUtil {
 		return buffer.toString();
 	}
 
-	public String getSpelling() {
-		return this.getSelling(this.getResource());
+	public static String getSpelling() {
+		return getSelling(getResource());
 	}
 
 }

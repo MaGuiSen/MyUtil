@@ -6,20 +6,23 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.ma.myutil.R;
+
 import java.util.List;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import lib.widget.FrameProgressLayout;
 import lib.xlistview.XListView;
+import module.list.adapter.MsgListAdapter;
 import module.list.adapter.TxtListAdapter;
 
-public class ListActivity extends FragmentActivity implements XListView.IXListViewListener,ListLogic.Listener<TextModel> {
+public class MsgListActivity extends FragmentActivity implements XListView.IXListViewListener,ListLogic.Listener<TextModel> {
     @Bind(R.id.lv_data)
     XListView lvData;
     @Bind(R.id.frame_progress)
     FrameProgressLayout frameProgress;
 
-    TxtListAdapter adapter;
+    MsgListAdapter adapter;
     ListLogic currLogic;
 
     @Override
@@ -41,7 +44,7 @@ public class ListActivity extends FragmentActivity implements XListView.IXListVi
     }
 
     private void initLv() {
-        adapter = new TxtListAdapter(this);
+        adapter = new MsgListAdapter(this);
         lvData.setAdapter(adapter);
         lvData.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

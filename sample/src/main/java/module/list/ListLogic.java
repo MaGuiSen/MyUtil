@@ -4,6 +4,7 @@ import android.content.Context;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,6 +13,7 @@ import java.util.List;
 public class ListLogic {
     Context context;
     Listener listener;
+    int pageIndex = 1,pageSize = 15;
 
     public ListLogic(Context context, Listener listener) {
         this.context = context;
@@ -19,9 +21,21 @@ public class ListLogic {
     }
 
     public void loadDatas(){
-        if(listener!=null){
-            listener.loadDataSuccess(null);
-        }
+            List<TextModel> datas = new ArrayList<>();
+            if (pageIndex < 3){
+                for(int i=0;i<15;i++){
+                    TextModel textModel = new TextModel();
+                    datas.add(textModel);
+                }
+            }else if(pageIndex == 3){
+                for(int i=0;i<11;i++){
+                    TextModel textModel = new TextModel();
+                    datas.add(textModel);
+                }
+            }
+            if(listener!=null){
+                listener.loadDataSuccess(datas);
+            }
     }
 
     interface Listener<T>{

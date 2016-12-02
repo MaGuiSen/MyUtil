@@ -11,6 +11,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:paddingBottom="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -80,6 +81,31 @@
 
             <include layout="@layout/layout_txt_bottom_img_up_item"></include>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00af00"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="星星"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <include layout="@layout/layout_rating"></include>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00af00"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="进度条"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <include layout="@layout/layout_progress_bar"></include>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

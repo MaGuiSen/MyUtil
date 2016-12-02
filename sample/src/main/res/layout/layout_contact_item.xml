@@ -13,6 +13,7 @@
         android:layout_height="22dp"
         android:background="#ebebeb"/>
     <LinearLayout
+        android:id="@+id/llay_main"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:gravity="center_vertical"
@@ -25,18 +26,21 @@
             android:layout_height="36dp">
 
             <ImageView
-                android:id="@+id/img_show"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@mipmap/ic_head_default_me" />
-
-            <ImageView
                 android:id="@+id/img_level"
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/shape_circle_red"/>
+
+            <ImageView
+                android:id="@+id/img_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_head_default_me"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
 

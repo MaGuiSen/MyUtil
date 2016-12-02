@@ -32,6 +32,14 @@
         </activity>
         <activity android:name="module.qrcode.QRcodeActivity">
         </activity>
+        <activity android:name="module.list.MsgListActivity">
+        </activity>
+        <activity android:name="module.search.SearchActivity">
+        </activity>
+        <activity android:name="module.list.SidebarListActivity">
+        </activity>
+        <activity android:name="module.switch_widget.SwitchActivity">
+        </activity>
 
     </application>
 

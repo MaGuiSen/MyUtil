@@ -1,4 +1,15 @@
 <resources>
+    <!-- title bar -->
+    <dimen name="bar_height">44dp</dimen>
+    <dimen name="bar_left_btn_width">44dp</dimen>
+    <dimen name="bar_right_btn_width">44dp</dimen>
+    <!-- 标题栏中间字体大小-->
+    <dimen name="bar_txt_center_size">18sp</dimen>
+    <!-- 标题栏右边字体大小-->
+    <dimen name="bar_txt_right_size">16sp</dimen>
+    <!-- 标题栏左边字体大小-->
+    <dimen name="bar_txt_left_size">16sp</dimen>
+
     <!--长度这种没必要设置成统一的，到时候根据需要，进行设置变量-->
     <dimen name="t_a">8dp</dimen>
     <dimen name="t_b">16dp</dimen>

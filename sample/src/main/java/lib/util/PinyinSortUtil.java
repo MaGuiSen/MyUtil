@@ -19,7 +19,7 @@ public class PinyinSortUtil {
 	 * @param method
 	 * 根据什么排序 getSortLetters getName
 	 */
-	public <E> void Sort(List<E> list, final String method) {
+	public static <E> void Sort(List<E> list, final String method) {
 		Collections.sort(list, new Comparator<E>() {
 
 			@Override

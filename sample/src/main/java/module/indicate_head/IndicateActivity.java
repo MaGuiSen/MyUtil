@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ma.myutil.R;
 
@@ -18,6 +17,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import lib.util.DensityUtil;
 import lib.util.ScreenUtil;
 
 public class IndicateActivity extends FragmentActivity {
@@ -38,8 +38,8 @@ public class IndicateActivity extends FragmentActivity {
     LinearLayout llMoreColumns;
     @Bind(R.id.category_line)
     View categoryLine;
-    @Bind(R.id.mViewPager)
-    ViewPager mViewPager;
+    @Bind(R.id.viewPager)
+    ViewPager viewPager;
 
     int columnSelectIndex = 0;
 
@@ -66,24 +66,23 @@ public class IndicateActivity extends FragmentActivity {
         newsClassify.add("dd");
         //这步骤需要
         mColumnHorizontalScrollView.setParam(this,ScreenUtil.getScreenSize(this,null)[0],mRadioGroup_content,shadeLeft,shadeRight,llMoreColumns,rlColumn);
-        init();
+        initIndicator();
     }
 
     private ArrayList<String> newsClassify = new ArrayList<String>();
     List<TextView> labels = new ArrayList<>();
-    public void init() {
+    public void initIndicator() {
         int count = newsClassify.size();
         for (int i = 0; i < count; i++) {
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(DensityUtil.dip2px(this,40), LinearLayout.LayoutParams.WRAP_CONTENT);
             params.leftMargin = 10;
             params.rightMargin = 10;
             TextView localTextView = new TextView(this);
             localTextView.setLayoutParams(params);
-            localTextView.setBackgroundColor(columnSelectIndex == i ? 0xff00ff :0xffff0000);
+            localTextView.setBackgroundResource(columnSelectIndex == i ? R.drawable.shape_round_rect_indicator_ch :R.drawable.shape_round_rect_indicator_un);
             localTextView.setGravity(Gravity.CENTER);
-            localTextView.setPadding(10, 10, 10, 10);
             localTextView.setId(i);
-            localTextView.setTextColor(0xff000000);
+            localTextView.setTextColor(columnSelectIndex == i ? 0xffffffff :0xffffffff);
             localTextView.setText(newsClassify.get(i));
             final int position = i;
             localTextView.setOnClickListener(new View.OnClickListener() {
@@ -109,11 +108,8 @@ public class IndicateActivity extends FragmentActivity {
             mColumnHorizontalScrollView.smoothScrollTo(i2, 0);
         }
         for (int i = 0; i < labels.size(); i++) {
-            if(i == position){
-                labels.get(i).setBackgroundColor(0xffff00ff);
-            }else{
-                labels.get(i).setBackgroundColor(0xffff0000);
-            }
+            labels.get(i).setBackgroundResource(
+                    position == i ? R.drawable.shape_round_rect_indicator_ch :R.drawable.shape_round_rect_indicator_un);
         }
     }
 }

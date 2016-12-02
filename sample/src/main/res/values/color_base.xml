@@ -2,13 +2,13 @@
 <resources>
     <!--状态栏颜色-->
     <color name="bar_status_color">#ffffffff</color>
-    <color name="bar_bg_color">#ffffffff</color>
+    <color name="bar_bg_color">#ffAFCDEB</color>
     <!-- 标题栏标题颜色-->
-    <color name="bar_text_center_color">#ff4d4d4d</color>
+    <color name="bar_txt_center_color">#ff4d4d4d</color>
     <!-- 标题栏右上角字体颜色-->
-    <color name="bar_text_right_color">#ff808080</color>
+    <color name="bar_txt_right_color">#ff808080</color>
     <!-- 标题栏右上角字体按下颜色-->
-    <color name="bar_text_right_pressed_color">#AFCDEB</color>
+    <color name="bar_txt_right_pressed_color">#AFCDEB</color>
     <!--背景颜色-->
     <color name="t_bg_a">#fff2f2f2</color>
 

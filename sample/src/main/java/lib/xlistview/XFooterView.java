@@ -86,12 +86,12 @@ public class XFooterView extends LinearLayout {
 
         switch (state) {
             case STATE_NORMAL:
-                mHintView.setText("下拉刷新");
+                mHintView.setText("上拉加载");
                 break;
 
             case STATE_READY:
                 if (mState != STATE_READY) {
-                    mHintView.setText("松开刷新数据");
+                    mHintView.setText("松开加载数据");
                 }
                 break;
 

@@ -66,14 +66,14 @@ public class ColumnHorizontalScrollView extends HorizontalScrollView {
 	/** 
 	 * 传入父类布局中的资源文件
 	 * */
-	public void setParam(Activity activity, int mScreenWitdh,View paramView1,ImageView paramView2, ImageView paramView3 ,View paramView4,View paramView5){
+	public void setParam(Activity activity, int mScreenWitdh,View ll_content_,ImageView leftImage_, ImageView rightImage_ ,View ll_more_,View rl_column_){
 		this.activity = activity;
 		this.mScreenWitdh = mScreenWitdh;
-		ll_content = paramView1;
-		leftImage = paramView2;
-		rightImage = paramView3;
-		ll_more = paramView4;
-		rl_column = paramView5;
+		ll_content = ll_content_;
+		leftImage = leftImage_;
+		rightImage = rightImage_;
+		ll_more = ll_more_;
+		rl_column = rl_column_;
 	}
 	/** 
 	 * 判断左右阴影的显示隐藏效果
